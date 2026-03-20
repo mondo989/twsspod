@@ -11,18 +11,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="css/main.css">
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "vyuyj03ar0");
+  </script>
 </head>
 <body>
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__container">
-      <a href="#" class="nav__logo">TWSS</a>
-      <button class="nav__toggle" aria-label="Toggle menu">
+      <a href="#" class="nav__logo">That's What She Said Podcast</a>
+      <button type="button" class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <ul class="nav__menu">
+      <ul class="nav__menu" id="nav-menu">
         <li><a href="#about">About</a></li>
         <li><a href="#podcasts">Podcasts</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -201,32 +209,32 @@
           <div class="gallery__track" id="galleryTrack">
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img1.jpg" alt="That's What She Said - Moment 1" loading="lazy">
+                <img src="assets/img01.png" class="img-1" alt="That's What She Said - Moment 1" loading="lazy">
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img2.jpg" alt="That's What She Said - Moment 2" loading="lazy">
+                <img src="assets/img2.jpg" class="img-2" alt="That's What She Said - Moment 2" loading="lazy">
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img3.jpg" alt="That's What She Said - Moment 3" loading="lazy">
+                <img src="assets/img3.jpg" class="img-3" alt="That's What She Said - Moment 3" loading="lazy">
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img4.jpg" alt="That's What She Said - Moment 4" loading="lazy">
+                <img src="assets/img4.jpg" class="img-4" alt="That's What She Said - Moment 4" loading="lazy">
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img5.jpg" alt="That's What She Said - Moment 5" loading="lazy">
+                <img src="assets/img5.jpg" class="img-5" alt="That's What She Said - Moment 5" loading="lazy">
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img6.jpg" alt="That's What She Said - Moment 6" loading="lazy">
+                <img src="assets/img6.jpg" class="img-6" alt="That's What She Said - Moment 6" loading="lazy">
               </div>
             </div>
           </div>
@@ -427,6 +435,7 @@
     </div>
   </footer>
 
+  <script src="js/clarity-track.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

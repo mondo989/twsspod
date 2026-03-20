@@ -35,14 +35,18 @@ window.addEventListener('scroll', () => {
 });
 
 navToggle?.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-  navToggle.classList.toggle('active');
+  const open = navMenu.classList.toggle('active');
+  navToggle.classList.toggle('active', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
 });
 
 document.querySelectorAll('.nav__menu a').forEach(link => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('active');
     navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open menu');
   });
 });
 
@@ -261,6 +265,7 @@ subscribeForm?.addEventListener('submit', async (e) => {
   if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
+    window.twssTrack?.('subscribe_success');
     submitBtn.innerHTML = '<span>Thank you!</span>';
     subscribeForm.reset();
     
@@ -283,6 +288,7 @@ subscribeForm?.addEventListener('submit', async (e) => {
       body: JSON.stringify(data)
     });
     
+    window.twssTrack?.('subscribe_success');
     submitBtn.innerHTML = '<span>Thank you!</span>';
     subscribeForm.reset();
     
@@ -293,6 +299,7 @@ subscribeForm?.addEventListener('submit', async (e) => {
     
   } catch (error) {
     console.error('Subscription error:', error);
+    window.twssTrack?.('subscribe_error');
     submitBtn.innerHTML = '<span>Error - Try Again</span>';
     submitBtn.disabled = false;
     
@@ -303,24 +310,18 @@ subscribeForm?.addEventListener('submit', async (e) => {
 });
 
 // =============================================
-// YOUTUBE VIDEO EMBEDS
+// YOUTUBE: open episode in new tab
 // =============================================
 
 document.querySelectorAll('.podcast-card__placeholder, .podcast-card__thumbnail').forEach(element => {
   element.addEventListener('click', function() {
     const videoId = this.dataset.videoId;
-    
+
     if (videoId && !videoId.startsWith('PLACEHOLDER')) {
-      const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-      iframe.width = '100%';
-      iframe.height = '100%';
-      iframe.frameBorder = '0';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
-      iframe.allowFullscreen = true;
-      
-      this.parentElement.innerHTML = '';
-      this.parentElement.appendChild(iframe);
+      window.twssTrack?.('podcast_youtube_play');
+      const url = `https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`;
+      const win = window.open(url, '_blank');
+      if (win) win.opener = null;
     }
   });
 });
@@ -333,11 +334,13 @@ document.getElementById('addToCalendar')?.addEventListener('click', (e) => {
   e.preventDefault();
   
   if (GOOGLE_CALENDAR_ID !== 'YOUR_GOOGLE_CALENDAR_ID@group.calendar.google.com') {
+    window.twssTrack?.('calendar_add_google_open');
     window.open(
       `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(GOOGLE_CALENDAR_ID)}`,
       '_blank'
     );
   } else {
+    window.twssTrack?.('calendar_add_placeholder');
     alert('Calendar integration coming soon! Check back later to add our events to your calendar.');
   }
 });

@@ -13,6 +13,11 @@
     background: var(--color-white);
   }
   
+  // X icon must stay visible over the white mobile drawer
+  .nav__toggle.active span {
+    background: var(--color-navy);
+  }
+  
   &.scrolled {
     .nav__logo,
     .nav__menu a {

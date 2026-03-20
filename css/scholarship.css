@@ -6,6 +6,9 @@
 .nav--dark .nav__toggle span {
   background: var(--color-white);
 }
+.nav--dark .nav__toggle.active span {
+  background: var(--color-navy);
+}
 .nav--dark.scrolled .nav__logo,
 .nav--dark.scrolled .nav__menu a {
   color: var(--color-navy);
