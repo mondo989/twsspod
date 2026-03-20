@@ -4,6 +4,7 @@
   "description": "That's What She Said Podcast Landing Page",
   "scripts": {
     "start": "node server.js",
+    "build": "sass scss:css",
     "scss": "sass --watch scss:css",
     "dev": "concurrently \"npm run scss\" \"npm start\""
   },

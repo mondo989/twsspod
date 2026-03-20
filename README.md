@@ -38,11 +38,19 @@ twsspod/
 
 ## Deployment to GitHub Pages
 
-1. Ensure all SCSS is compiled to CSS: `npx sass scss:css`
-2. Push to GitHub
-3. Go to Settings > Pages
-4. Set source to main branch, root folder
-5. Your site will be live at `https://username.github.io/repo-name`
+The workflow **Build SCSS and deploy Pages** (`.github/workflows/pages.yml`) runs on every push to `main`: it runs `npm run build` (compiles `scss/` → `css/`) and deploys `index.html`, `scholarship.html`, `css/`, `js/`, and `assets/`.
+
+### One-time setup
+
+1. GitHub → **Settings** → **Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”).
+
+Your site will be live at `https://username.github.io/repo-name`.
+
+### Local development
+
+- **`npm run dev`** — watch SCSS and run the Express server (same as before).
+- **`npm run build`** — one-off compile (same command CI uses). Commit updated `css/*.css` when you want the repo to reflect built CSS for local previews without Actions.
 
 ---
 
