@@ -198,7 +198,7 @@ Edit the CSS variables in `scss/main.scss`:
   --color-pink-light: #FADDE1;
   --color-pink: #F8C8DC;
   --color-navy: #1E2761;
-  --color-terracotta: #C4784A;
+  --color-pink-accent: #A84D6B;
   // ... etc
 }
 ```

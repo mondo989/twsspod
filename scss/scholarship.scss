@@ -68,7 +68,7 @@
       width: 600px;
       height: 600px;
       border-radius: 50%;
-      background: var(--color-terracotta);
+      background: var(--color-pink-accent);
       opacity: 0.08;
       bottom: -200px;
       left: -100px;
@@ -357,7 +357,7 @@
   &__time {
     font-size: 0.875rem;
     font-weight: 600;
-    color: var(--color-terracotta);
+    color: var(--color-pink-accent);
     min-width: 80px;
     padding-top: 2px;
   }
@@ -525,7 +525,7 @@
       
       &::before {
         content: '✓';
-        color: var(--color-terracotta);
+        color: var(--color-pink-accent);
         font-weight: 700;
       }
       
@@ -629,7 +629,7 @@
     font-family: var(--font-display);
     font-size: 2rem;
     font-weight: 700;
-    color: var(--color-terracotta);
+    color: var(--color-pink-accent);
     margin-bottom: var(--space-lg);
   }
   

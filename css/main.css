@@ -6,7 +6,7 @@
   --color-navy: #1E2761;
   --color-navy-dark: #151C4A;
   --color-navy-light: #2A3578;
-  --color-terracotta: #C4784A;
+  --color-pink-accent: #A84D6B;
   --color-cream: #FFF9F5;
   --color-white: #FFFFFF;
   --color-black: #0A0A0A;
@@ -90,7 +90,7 @@ ul, ol {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-terracotta);
+  color: var(--color-pink-accent);
   margin-bottom: var(--space-sm);
 }
 .section-label--light {
@@ -301,7 +301,7 @@ ul, ol {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--color-terracotta);
+  background: var(--color-pink-accent);
   transition: width var(--transition-medium);
 }
 .nav__menu a:hover::after {
@@ -601,7 +601,7 @@ ul, ol {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--color-terracotta);
+  color: var(--color-pink-accent);
 }
 @media (max-width: 968px) {
   .hero__image-badge {
@@ -895,7 +895,7 @@ ul, ol {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--color-terracotta);
+  color: var(--color-pink-accent);
 }
 .podcast-card__title {
   font-family: var(--font-display);
@@ -1083,7 +1083,7 @@ ul, ol {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: var(--color-terracotta);
+  background: var(--color-pink-accent);
   opacity: 0.1;
   bottom: -100px;
   left: 10%;
@@ -1216,7 +1216,7 @@ ul, ol {
   bottom: 6px;
   width: 6px;
   height: 6px;
-  background: var(--color-terracotta);
+  background: var(--color-pink-accent);
   border-radius: 50%;
 }
 .calendar__day--selected {
@@ -1260,7 +1260,7 @@ ul, ol {
 .calendar__event-time {
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-terracotta);
+  color: var(--color-pink-accent);
   min-width: 80px;
 }
 .calendar__event-title {
@@ -1276,7 +1276,7 @@ ul, ol {
   color: var(--color-navy-light);
 }
 .calendar__note small a {
-  color: var(--color-terracotta);
+  color: var(--color-pink-accent);
   text-decoration: underline;
 }
 .calendar__note small a:hover {
