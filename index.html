@@ -6,6 +6,8 @@
   <title>That's What She Said | with Christiana Malacara</title>
   <meta name="description" content="A captivating radio talk show dedicated to celebrating women's empowerment from the Great Lakes Bay Region.">
   
+  <link rel="preload" as="image" href="assets/hero.webp" type="image/webp">
+  <link rel="preconnect" href="https://i.ytimg.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -64,7 +66,10 @@
         <div class="hero__image-container">
           <div class="hero__image-glow"></div>
           <div class="hero__image-frame">
-            <img src="assets/hero.jpg" alt="Christiana Malacara - Host of That's What She Said" class="hero__image">
+            <picture>
+              <source srcset="assets/hero.webp" type="image/webp">
+              <img src="assets/hero.jpg" alt="Christiana Malacara - Host of That's What She Said" class="hero__image" width="960" height="960" fetchpriority="high" decoding="async">
+            </picture>
           </div>
           <div class="hero__image-accent hero__image-accent--1"></div>
           <div class="hero__image-accent hero__image-accent--2"></div>
@@ -114,7 +119,10 @@
         <div class="about__image reveal reveal--delay-2">
           <div class="about__image-wrapper">
             <div class="about__image-decoration"></div>
-            <img src="assets/christiana-malacara-2026_orig.jpg" alt="Christiana Malacara" class="about__image-photo">
+            <picture>
+              <source srcset="assets/christiana-malacara-2026_orig.webp" type="image/webp">
+              <img src="assets/christiana-malacara-2026_orig.jpg" alt="Christiana Malacara" class="about__image-photo" width="533" height="800" loading="lazy" decoding="async">
+            </picture>
           </div>
         </div>
       </div>
@@ -137,7 +145,7 @@
         <article class="podcast-card reveal">
           <div class="podcast-card__video">
             <div class="podcast-card__thumbnail" data-video-id="QGQ8j6X54XY">
-              <img src="https://img.youtube.com/vi/QGQ8j6X54XY/hqdefault.jpg" alt="Episode thumbnail" loading="lazy">
+              <img src="https://i.ytimg.com/vi/QGQ8j6X54XY/hqdefault.jpg" alt="Episode thumbnail" width="480" height="360" loading="lazy" decoding="async">
               <div class="podcast-card__play">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
@@ -154,7 +162,7 @@
         <article class="podcast-card reveal reveal--delay-1">
           <div class="podcast-card__video">
             <div class="podcast-card__thumbnail" data-video-id="JDbWt2wV6SI">
-              <img src="https://img.youtube.com/vi/JDbWt2wV6SI/hqdefault.jpg" alt="Episode thumbnail" loading="lazy">
+              <img src="https://i.ytimg.com/vi/JDbWt2wV6SI/hqdefault.jpg" alt="Episode thumbnail" width="480" height="360" loading="lazy" decoding="async">
               <div class="podcast-card__play">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
@@ -171,7 +179,7 @@
         <article class="podcast-card reveal reveal--delay-2">
           <div class="podcast-card__video">
             <div class="podcast-card__thumbnail" data-video-id="nvlsrmNh8Lg">
-              <img src="https://img.youtube.com/vi/nvlsrmNh8Lg/hqdefault.jpg" alt="Episode thumbnail" loading="lazy">
+              <img src="https://i.ytimg.com/vi/nvlsrmNh8Lg/hqdefault.jpg" alt="Episode thumbnail" width="480" height="360" loading="lazy" decoding="async">
               <div class="podcast-card__play">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
               </div>
@@ -209,32 +217,50 @@
           <div class="gallery__track" id="galleryTrack">
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img01.png" class="img-1" alt="That's What She Said - Moment 1" loading="lazy">
+                <picture>
+                  <source srcset="assets/img01.webp" type="image/webp">
+                  <img src="assets/img01.jpg" class="img-1" alt="That's What She Said - Moment 1" width="1194" height="1400" loading="lazy" decoding="async">
+                </picture>
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img2.jpg" class="img-2" alt="That's What She Said - Moment 2" loading="lazy">
+                <picture>
+                  <source srcset="assets/img2.webp" type="image/webp">
+                  <img src="assets/img2.jpg" class="img-2" alt="That's What She Said - Moment 2" width="1137" height="1089" loading="lazy" decoding="async">
+                </picture>
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img3.jpg" class="img-3" alt="That's What She Said - Moment 3" loading="lazy">
+                <picture>
+                  <source srcset="assets/img3.webp" type="image/webp">
+                  <img src="assets/img3.jpg" class="img-3" alt="That's What She Said - Moment 3" width="1233" height="1400" loading="lazy" decoding="async">
+                </picture>
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img4.jpg" class="img-4" alt="That's What She Said - Moment 4" loading="lazy">
+                <picture>
+                  <source srcset="assets/img4.webp" type="image/webp">
+                  <img src="assets/img4.jpg" class="img-4" alt="That's What She Said - Moment 4" width="960" height="720" loading="lazy" decoding="async">
+                </picture>
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img5.jpg" class="img-5" alt="That's What She Said - Moment 5" loading="lazy">
+                <picture>
+                  <source srcset="assets/img5.webp" type="image/webp">
+                  <img src="assets/img5.jpg" class="img-5" alt="That's What She Said - Moment 5" width="1400" height="1381" loading="lazy" decoding="async">
+                </picture>
               </div>
             </div>
             <div class="gallery__slide">
               <div class="gallery__image-wrapper">
-                <img src="assets/img6.jpg" class="img-6" alt="That's What She Said - Moment 6" loading="lazy">
+                <picture>
+                  <source srcset="assets/img6.webp" type="image/webp">
+                  <img src="assets/img6.jpg" class="img-6" alt="That's What She Said - Moment 6" width="1050" height="1400" loading="lazy" decoding="async">
+                </picture>
               </div>
             </div>
           </div>

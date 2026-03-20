@@ -267,6 +267,8 @@ ul, ol {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--space-md);
+    min-width: 0;
   }
   
   &__logo {
@@ -275,6 +277,29 @@ ul, ol {
     font-weight: 700;
     color: var(--color-navy);
     letter-spacing: -0.02em;
+    line-height: 1.15;
+    flex-shrink: 1;
+    min-width: 0;
+  }
+  
+  // Narrow desktop / large tablet: compact horizontal nav before drawer
+  @media (max-width: 1320px) and (min-width: 1101px) {
+    &__logo {
+      font-size: 1.2rem;
+    }
+    
+    &__menu {
+      gap: var(--space-sm);
+      
+      a {
+        font-size: 0.8125rem;
+      }
+    }
+    
+    &__cta {
+      padding: 0.6rem 1.1rem;
+      font-size: 0.8125rem;
+    }
   }
   
   &__toggle {
@@ -305,7 +330,7 @@ ul, ol {
       transform: translateY(-7px) rotate(-45deg);
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
       display: flex;
       position: relative;
       z-index: 1002;
@@ -338,7 +363,7 @@ ul, ol {
       }
     }
     
-    @media (max-width: 768px) {
+    @media (max-width: 1100px) {
       position: fixed;
       top: 0;
       right: 0;
