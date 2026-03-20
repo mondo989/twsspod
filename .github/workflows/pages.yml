@@ -36,7 +36,7 @@ jobs:
       - name: Stage static site (no server/deps in artifact)
         run: |
           mkdir -p _site
-          cp index.html scholarship.html _site/
+          cp index.html scholarship.html CNAME _site/
           cp -r css js assets _site/
           touch _site/.nojekyll
 
