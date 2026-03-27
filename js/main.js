@@ -242,7 +242,7 @@ new Calendar();
 // SUBSCRIBE FORM - Google Apps Script Integration
 // =============================================
 
-const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzQigAwzgi2dvHsKjrOVj4cEMGrb2wbhz_jsqIgXE21CuRpeGndnJb2n8inzA2h4XICmg/exec';
 
 const subscribeForm = document.getElementById('subscribeForm');
 
@@ -250,10 +250,12 @@ subscribeForm?.addEventListener('submit', async (e) => {
   e.preventDefault();
   
   const formData = new FormData(subscribeForm);
+  const now = new Date();
   const data = {
     name: formData.get('name'),
     email: formData.get('email'),
-    timestamp: new Date().toISOString()
+    date: now.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }),
+    time: now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
   };
   
   const submitBtn = subscribeForm.querySelector('button[type="submit"]');
